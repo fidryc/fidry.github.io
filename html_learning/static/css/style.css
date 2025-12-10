@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(217, 217, 217);
+    color: rgb(0, 0, 0);
+}
+
+.base-area {
+    min-height: 100vh;
+}
+
+/* Навигация */
+nav {
+    padding: 1rem;
+    border-radius: 75px;
+    margin: 1rem;
+    position: sticky;
+    top: 20px;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    background-color: rgba(218, 218, 218, 0.441);
+    backdrop-filter: blur(15px) saturate(150%) contrast(120%) hue-rotate(10deg);
+    -webkit-backdrop-filter: blur(15px) saturate(150%) contrast(120%) hue-rotate(10deg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.burger-menu {
+    text-align: center;
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.nav-bar li {
+    flex: 1;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+
+.nav-bar a {
+    color: #000000;
+    font-weight: 600;
+    transition: background-color 0.35s, color 0.35s, box-shadow 0.35s;
+    border-radius: 1rem;
+    padding: .5rem .8rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover {
+    background-color: #00000046;
+    border-radius: 1rem;
+    color: #ffffff;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Основной контейнер */
+.base-container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.base-container h1 {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.base-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.base-container p {
+    max-width: 55rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.img-rounded {
+    border-radius: 50%;
+    width: 350px;
+    padding: 1rem;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.button {
+    margin: 1rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #7291f7;
+    cursor: pointer;
+    transition: background-color 0.35s, box-shadow 0.3s;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background-color: #5a75d9;
+    box-shadow: 0 0px 12px rgba(0, 0, 0, 0.4);
+}
+
+hr {
+    width: 80%;
+    margin: 3rem auto;
+    border: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Портфолио */
+.portfolio-area {
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.portfolio-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-block.row-reverse {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.portfolio-block.row-reverse .portfolio-text {
+    flex: 1;
+}
+
+.portfolio-block.row-reverse .portfolio-images {
+    flex: 1;
+}
+
+.portfolio-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.portfolio-images {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.row-images img {
+    width: calc(33.333% - 0.66rem);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.row-images img:hover {
+    transform: scale(1.05);
+}
+
+.single-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+/* Форма обратной связи */
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7291f7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #e74c3c;
+}
+
+/* Футер */
+footer {
+    background-color: rgba(50, 50, 50, 0.9);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-contacts {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-contacts a {
+    color: #7291f7;
+    transition: color 0.3s;
+}
+
+.footer-contacts a:hover {
+    color: #5a75d9;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #7291f7;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #5a75d9;
+    transform: scale(1.1);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        gap: .5rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-bar.shown {
+        display: flex;
+    }
+
+    .base-container h1 {
+        font-size: 2rem;
+    }
+
+    .base-container p {
+        font-size: 1.2rem;
+    }
+
+    .img-rounded {
+        width: 250px;
+    }
+
+    .portfolio-block.row-reverse {
+        flex-direction: column;
+    }
+
+    .row-images img {
+        width: 100%;
+    }
+
+    .footer-contacts {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
